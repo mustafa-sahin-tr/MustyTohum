@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<title>Tohum – Oyun ekranı</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap">
+<style>
+body{margin:0;font-family:'Nunito',system-ui,sans-serif;color:#243B1F}
+a{color:#3F7A2E}a:hover{color:#2B5520}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #EEF5E6; display: flex; flex-direction: column; padding: 56px 24px 24px; gap: 12px; overflow: hidden">
+  <div style="display: flex; justify-content: space-between; align-items: flex-start">
+    <div style="display: flex; flex-direction: column; gap: 2px">
+      <div style="font-size: 12px; letter-spacing: 2px; font-weight: 700; color: #6E8A62">SEVİYE 31</div>
+      <div style="font-size: 26px; font-weight: 800; line-height: 1.1">Lavanta Tarhı</div>
+      <div style="font-size: 13px; color: #5C7452">Tohumları aynı renk tarha sürükle</div>
+    </div>
+    <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 6px">
+      <button type="button" aria-label="Mağaza, 1240 coin" style="height: 40px; border-radius: 12px; border: 1px solid #CFE0C4; background: #FFFFFF; color: #243B1F; font-family: 'Nunito', system-ui, sans-serif; font-size: 13px; font-weight: 800; padding: 0 12px; cursor: pointer; display: flex; align-items: center; gap: 8px">
+        <span style="width: 16px; height: 16px; border-radius: 50%; background: #E9B949; border: 2px solid #B98B00; box-sizing: border-box"></span>
+        1.240
+      </button>
+      <button type="button" aria-label="Ana menü" style="width: 40px; height: 40px; border-radius: 12px; border: 1px solid #CFE0C4; background: #FFFFFF; padding: 0; cursor: pointer; display: flex; align-items: center; justify-content: center">
+        <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#243B1F" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11 12 3l9 8"></path><path d="M5 10v10h14V10"></path></svg>
+      </button>
+    </div>
+  </div>
+
+  <div style="display: flex; justify-content: space-between; align-items: center; background: #FFFFFF; border: 1px solid #CFE0C4; border-radius: 12px; padding: 8px 12px; font-size: 12px; color: #5C7452">
+    <span style="font-weight: 800; color: #243B1F">Süre yok</span>
+    <span>Bugün reklam: <span style="font-weight: 800; color: #243B1F">1 / 3</span></span>
+    <span>Seviye arası reklam: <span style="font-weight: 800; color: #243B1F">yok</span></span>
+  </div>
+
+  <div style="position: relative; height: 436px; background: #FFFFFF; border: 1px solid #CFE0C4; border-radius: 18px; overflow: hidden">
+    <div style="position: absolute; left: 36px; top: 28px; width: 40px; height: 40px; border-radius: 50%; background: #8E6BAF; box-shadow: inset -4px -4px 0 rgba(0,0,0,0.08)"></div>
+    <div style="position: absolute; left: 100px; top: 28px; width: 40px; height: 40px; border-radius: 50%; background: #E0A93A; box-shadow: inset -4px -4px 0 rgba(0,0,0,0.08)"></div>
+    <div style="position: absolute; left: 164px; top: 28px; width: 40px; height: 40px; border-radius: 50%; background: #D97A8C; box-shadow: inset -4px -4px 0 rgba(0,0,0,0.08)"></div>
+    <div style="position: absolute; left: 228px; top: 28px; width: 40px; height: 40px; border-radius: 50%; background: #8E6BAF; box-shadow: inset -4px -4px 0 rgba(0,0,0,0.08)"></div>
+    <div style="position: absolute; left: 36px; top: 92px; width: 40px; height: 40px; border-radius: 50%; background: #E0A93A; box-shadow: inset -4px -4px 0 rgba(0,0,0,0.08)"></div>
+    <div style="position: absolute; left: 164px; top: 92px; width: 40px; height: 40px; border-radius: 50%; background: #8E6BAF; box-shadow: inset -4px -4px 0 rgba(0,0,0,0.08)"></div>
+    <div style="position: absolute; left: 228px; top: 92px; width: 40px; height: 40px; border-radius: 50%; background: #D97A8C; box-shadow: inset -4px -4px 0 rgba(0,0,0,0.08)"></div>
+    <div style="position: absolute; left: 292px; top: 92px; width: 40px; height: 40px; border-radius: 50%; background: #E0A93A; box-shadow: inset -4px -4px 0 rgba(0,0,0,0.08)"></div>
+    <div style="position: absolute; left: 100px; top: 156px; width: 40px; height: 40px; border-radius: 50%; background: #D97A8C; box-shadow: inset -4px -4px 0 rgba(0,0,0,0.08)"></div>
+    <div style="position: absolute; left: 292px; top: 156px; width: 40px; height: 40px; border-radius: 50%; background: #8E6BAF; box-shadow: inset -4px -4px 0 rgba(0,0,0,0.08)"></div>
+
+    <div style="position: absolute; left: 112px; top: 100px; width: 0px; height: 0px"></div>
+    <div style="position: absolute; left: 118px; top: 118px; width: 0px; height: 150px; border-left: 3px dotted #8E6BAF; transform: rotate(32deg); transform-origin: top"></div>
+    <div style="position: absolute; left: 96px; top: 84px; width: 52px; height: 52px; border-radius: 50%; background: #8E6BAF; box-shadow: 0 10px 0 rgba(36,59,31,0.14), inset -5px -5px 0 rgba(0,0,0,0.08)"></div>
+
+    <div style="position: absolute; left: 16px; top: 300px; width: 100px; height: 112px; border-radius: 14px; background: #8A6240; border: 4px solid #8E6BAF; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; padding-bottom: 8px; gap: 4px">
+      <div style="display: flex; gap: 4px"><span style="width: 12px; height: 12px; border-radius: 50%; background: #8E6BAF"></span><span style="width: 12px; height: 12px; border-radius: 50%; background: #8E6BAF"></span><span style="width: 12px; height: 12px; border-radius: 50%; background: #6E4F93"></span></div>
+      <span style="font-size: 12px; font-weight: 800; color: #FFFFFF">2 / 4</span>
+    </div>
+    <div style="position: absolute; left: 124px; top: 300px; width: 100px; height: 112px; border-radius: 14px; background: #8A6240; border: 4px solid #E0A93A; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; padding-bottom: 8px; gap: 4px">
+      <div style="display: flex; gap: 4px"><span style="width: 12px; height: 12px; border-radius: 50%; background: #E0A93A"></span><span style="width: 12px; height: 12px; border-radius: 50%; background: #E0A93A"></span><span style="width: 12px; height: 12px; border-radius: 50%; background: #E0A93A"></span><span style="width: 12px; height: 12px; border-radius: 50%; background: #E0A93A"></span></div>
+      <span style="font-size: 12px; font-weight: 800; color: #FFFFFF">açtı</span>
+    </div>
+    <div style="position: absolute; left: 232px; top: 300px; width: 100px; height: 112px; border-radius: 14px; background: #8A6240; border: 4px solid #D97A8C; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; padding-bottom: 8px; gap: 4px">
+      <div style="display: flex; gap: 4px"><span style="width: 12px; height: 12px; border-radius: 50%; background: #D97A8C"></span></div>
+      <span style="font-size: 12px; font-weight: 800; color: #FFFFFF">1 / 4</span>
+    </div>
+
+    <div style="position: absolute; left: 124px; top: 246px; width: 100px; display: flex; justify-content: center; gap: 6px">
+      <span style="width: 22px; height: 22px; border-radius: 50%; background: #E0A93A; box-shadow: inset 0 0 0 6px #F6D77A"></span>
+      <span style="width: 22px; height: 22px; border-radius: 50%; background: #E0A93A; box-shadow: inset 0 0 0 6px #F6D77A"></span>
+      <span style="width: 22px; height: 22px; border-radius: 50%; background: #E0A93A; box-shadow: inset 0 0 0 6px #F6D77A"></span>
+    </div>
+    <div style="position: absolute; left: 14px; top: 12px; font-size: 11px; font-weight: 700; color: #6E8A62; letter-spacing: 1px">TOHUMLAR · 10 kaldı</div>
+    <div style="position: absolute; right: 14px; top: 12px; font-size: 11px; font-weight: 700; color: #6E8A62">tarh dolunca çiçek açar</div>
+  </div>
+
+  <div style="display: flex; gap: 8px">
+    <button type="button" style="flex: 1; height: 56px; border-radius: 14px; border: 1px solid #CFE0C4; background: #FFFFFF; color: #243B1F; font-family: 'Nunito', system-ui, sans-serif; font-size: 12px; font-weight: 800; cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px"><span>Kürek</span><span style="font-size: 11px; color: #5C7452">150 coin</span></button>
+    <button type="button" style="flex: 1; height: 56px; border-radius: 14px; border: 1px solid #CFE0C4; background: #FFFFFF; color: #243B1F; font-family: 'Nunito', system-ui, sans-serif; font-size: 12px; font-weight: 800; cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px"><span>Yağmur</span><span style="font-size: 11px; color: #5C7452">300 coin</span></button>
+    <button type="button" style="flex: 1; height: 56px; border-radius: 14px; border: 1px solid #CFE0C4; background: #FFFFFF; color: #243B1F; font-family: 'Nunito', system-ui, sans-serif; font-size: 12px; font-weight: 800; cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px"><span>Arı</span><span style="font-size: 11px; color: #5C7452">reklam</span></button>
+    <button type="button" style="flex: 1.2; height: 56px; border-radius: 14px; border: none; background: #3F7A2E; color: #FFFFFF; font-family: 'Nunito', system-ui, sans-serif; font-size: 12px; font-weight: 800; cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px"><span>Bahçem</span><span style="font-size: 11px; color: #D7EAD0">12 / 40 tarh</span></button>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>
