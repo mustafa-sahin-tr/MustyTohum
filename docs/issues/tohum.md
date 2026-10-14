@@ -98,13 +98,13 @@ milestone: MVP
 
 **Tohum** epic'inin **1. story'si** (epic #EPIC). Tema: Altyapı.
 
-**Öncelik:** P1 · **Efor:** M · **Milestone:** MVP · **Dokunduğu yer:** Unity projesi, `MustyCozyCore` UPM bağımlılığı, sahne düzeni, UGS kurulumu, `EconomyConfig`
+**Öncelik:** P1 · **Efor:** M · **Milestone:** MVP · **Dokunduğu yer:** Unity projesi, `MustyCozyCore` (`com.mtafasahin.cozycore`, monorepo `mtafasahin-unity-packages`) UPM bağımlılığı, sahne düzeni, UGS kurulumu, `EconomyConfig`
 
 ### Kullanıcı hikâyesi
-Bir geliştirici olarak Tohum projesinin ortak paketi (reklam mediation ve interstitial kotası, IAP, UGS, yerelleştirme, büyük yazı modu, ayarlar, meta harita iskeleti) ilk günden kullanmasını isterim, böylece 4 haftanın tamamını ızgara, editör ve seviyelere harcayayım.
+Bir geliştirici olarak Tohum projesinin ortak paketi (reklam ve interstitial kotası, IAP, UGS, yerelleştirme, büyük yazı modu, ayarlar, meta harita iskeleti) ilk günden kullanmasını isterim, böylece 4 haftanın tamamını ızgara, editör ve seviyelere harcayayım.
 
 ### Kabul kriterleri
-- [ ] **Senaryo: Temiz kurulum** · Verilen boş bir Unity 2022 LTS projesi (URP 2D) · Eğer `MustyCozyCore` paketi git URL ile eklenirse · O zaman proje derlenir ve `Bootstrap` sahnesi açılınca UGS oturumu (anonim Player Accounts) kurulur, Cloud Save okunur.
+- [ ] **Senaryo: Temiz kurulum** · Verilen boş bir Unity 6000.6 projesi (URP 2D) · Eğer `MustyCozyCore` paketi git URL ile eklenirse · O zaman proje derlenir ve `Bootstrap` sahnesi açılınca UGS oturumu (anonim Player Accounts) kurulur, Cloud Save okunur.
 - [ ] **Senaryo: Sahne akışı** · Verilen `Bootstrap → Map → Play → Garden` sahneleri ve `LevelComplete` overlay'i · Eğer uygulama açılırsa · O zaman 2 sn içinde Map görünür; geri tuşu Map'te uygulamadan çıkmayı sorar, Play'de Map'e döner, Garden'da Map'e döner.
 - [ ] **Senaryo: Ana menü düğmesi** · Verilen herhangi bir sahne · Eğer sol üstteki ev düğmesine basılırsa · O zaman Map'e dönülür; Play'de devam eden seviye kaydedilir (Fluffy Drop'un "ana menüye dönüş yok" hatası burada kapanır).
 - [ ] **Senaryo: Yerelleştirme** · Verilen TR ve EN tabloları · Eğer cihaz dili TR ise · O zaman tüm metinler TR, aksi halde EN; dil Ayarlar'dan değiştirilebilir; 13 dil tablosu boş anahtarla EN'e düşer.
@@ -127,7 +127,7 @@ Bir geliştirici olarak Tohum projesinin ortak paketi (reklam mediation ve inter
 - `session_start` {max_level: int, coins: int} — Map görünür olduğunda
 
 ### Notlar
-- Karar: Reklam mediation AppLovin MAX (Daily Drop ile aynı); interstitial yerleşimi tek: `map_return`. Ödüllü yerleşimler: `bee`, `coin_double` (P2), `extra_undo` (P2).
+- Karar: Reklam ağı AdMob (Core ile aynı; MAX adaptörü SONRA, CozyCore 33); interstitial yerleşimi tek: `map_return`. Ödüllü yerleşimler: `bee`, `coin_double` (P2), `extra_undo` (P2).
 - `AdQuota` Core'a bu oyunla girer; Daily Drop interstitial kullanmadığı için paket tarafı yeni iştir (efor bu story'de M, pakette ayrıca S).
 - Çocuk kitle: MAX SDK `setIsAgeRestrictedUser` ve Play aile politikası beyanı 19. story'de; burada yalnızca SDK bayrağı için `AudienceConfig` alanı açılır.
 
